@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/value_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/value"
+        android:layout_marginTop="26dp"
+        android:text="192.168.1.39" />
+
+    <Button
+        android:id="@+id/buttonfw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonrv"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginTop="26dp"
+        android:onClick="onClickfw"
+        android:text="FWD" />
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonrv"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:onClick="onClick"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/buttonrt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonfw"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/buttonfw"
+        android:onClick="onClickRight"
+        android:text="RIGHT" />
+
+    <Button
+        android:id="@+id/buttonlf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonrt"
+        android:layout_alignBottom="@+id/buttonrt"
+        android:layout_toLeftOf="@+id/buttonfw"
+        android:onClick="onClickLeft"
+        android:text="LEFT" />
+
+    <Button
+        android:id="@+id/buttonrv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonlf"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickrv"
+        android:text="REV" />
+
+</RelativeLayout>
